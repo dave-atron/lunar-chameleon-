@@ -8,7 +8,7 @@ REDIR=${REDIR%$'\r'}
 FILE="$(echo $REDIR | cut -d "/" -f5)"
 
 #Change directory to /.bsi
-cd /.bsi
+cd /.tmp
 #If the filename that will be used already exists in /.bsi, do nothing
 if [[ -n $(find ./ -name "$FILE") ]] || [[ ! -d $(find /Applications -name Slack.app) ]]
 then 
